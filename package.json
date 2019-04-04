@@ -1,0 +1,11 @@
+{
+  "name": "grocery-app",
+  "version": "1.0.0",
+  "description": "grocery list app for families to make shopping more efficient",
+  "main": "src.server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine"
+  },
+  "author": "",
+  "license": "ISC"
+}
