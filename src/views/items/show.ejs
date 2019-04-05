@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <% include ../static/partials/head.ejs %>
-  </head>
-  <body>
-    <% include ../static/partials/navbar.ejs %>
+
+<head>
+  <% include ../static/partials/head.ejs %>
+</head>
+
+<body>
+  <% include ../static/partials/navbar.ejs %>
+
+  <main class="container">
+
     <% include ../static/partials/messages.ejs %>
 
-    <main class="container">
+    <h1><%- item.title %></h1>
+    <p>Status:
+      <% if(item.purchased === true) { %>
+      <% } %>
+    </p>
 
-     <h1><%- item.title %></h1> 
-        <p>Status:
-        <% if(item.purchased === true) { %>
-          <% } %>
-        </p>
+    <a href="/items/<%= item.id %>/edit" class="btn btn-warning">Edit</a>
 
-      <a href="/items/<%= item.id %>/edit" class="btn btn-warning">Edit</a>
+    <form style="display:initial" action="/items/<%= item.id %>/destroy" method="post">
+      <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    </div>
+  </main>
 
-      <form style="display:initial" action="/items/<%= item.id %>/destroy" method="post">
-        <button type="submit" class="btn btn-danger">Delete</button>
-      </form>
-      </div>
-    </main>
+  <% include ../static/partials/baseScripts.ejs %>
 
-    <% include ../static/partials/baseScripts.ejs %>
+</body>
 
-  </body>
 </html>
