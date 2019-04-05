@@ -1,4 +1,3 @@
-
 const express = require("express");
 const app = express();
 
@@ -10,4 +9,3 @@ routeConfig.init(app);
 
 module.exports = app;
 
-module.exports = app;

@@ -2,7 +2,7 @@
   "name": "grocery-app",
   "version": "1.0.0",
   "description": "grocery list app for families to make shopping more efficient",
-  "main": "src.server.js",
+  "main": "src/server",
   "scripts": {
     "test": "export NODE_ENV=test && jasmine",
     "start": "nodemon src/server.js"
@@ -29,6 +29,7 @@
     "express-session": "^1.15.6",
     "express-validator": "^5.0.2",
     "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "pg": "^7.9.0",
