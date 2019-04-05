@@ -2,19 +2,19 @@
 const faker = require("faker");
 
 //#2
- let items = [];
+let items = [];
 
- for(let i = 1 ; i <= 15 ; i++){
-   items.push({
-     title: faker.hacker.noun(),
-     createdAt: new Date(),
-     updatedAt: new Date()
-   });
- }
+for (let i = 1; i <= 15; i++) {
+  items.push({
+    title: faker.hacker.noun(),
+    createdAt: new Date(),
+    updatedAt: new Date()
+  });
+}
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    
+
     return queryInterface.bulkInsert("Items", items, {});
 
   },
@@ -23,6 +23,6 @@ module.exports = {
     return queryInterface.bulkDelete("Items", null, {});
 
 
-   
+
   }
 };
