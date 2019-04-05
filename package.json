@@ -7,16 +7,25 @@
     "test": "export NODE_ENV=test && jasmine",
     "start": "nodemon src/server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BRichie/systematic-shopper.git"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "faker": "^4.1.0",
     "jasmine": "^3.4.0",
     "request": "^2.88.0"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "cryptiles": "^4.1.3",
     "dotenv": "^5.0.1",
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "pg": "^7.9.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.43.1"
   }
 }
