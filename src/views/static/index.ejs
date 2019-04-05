@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/head.ejs %>
+
+</head>
+
+
+    <% include ./partials/navbar.ejs %>
+    <% include ../static/partials/messages.ejs %>
+
+
+    <main class="container">
+        <a href="/users/sign_up" class="btn btn-primary btn-lg">Sign up</a>
+
+
+        <header class="jumbotron my-4">
+            <h1 class="display-3">Systematic Shopper</h1>
+            <p class="lead">A smarter way to shop!</p>
+        </header>
+
+        <section class="row text-center">
+
+            <section class="col-lg-6">
+                <h4 class="card-title">Create Itemized List</h4>
+                <p class="card-text">Create, share and update lists in real time!</p>
+            </section>
+
+            <section class="col-lg-6">
+                <h4 class="card-title">Shop Smarter</h4>
+                <p class="card-text">Conquer any list with teamwork</p>
+            </section>
+
+        </section>
+
+    </main>
+    <% include ./partials/baseScripts.ejs %>
+
+</body>
+
+</html>
