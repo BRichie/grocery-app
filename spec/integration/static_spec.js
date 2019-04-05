@@ -6,11 +6,11 @@ describe("routes : static", () => {
 
   describe("GET /", () => {
 
-    it("should return status code 200 and have 'Systematic Shoppers' in the body", (done) => {
+    it("should return status code 200 and have 'Systematic Shopper' in the body", (done) => {
 
       request.get(base, (err, res, body) => {
         expect(res.statusCode).toBe(200);
-        expect(body).toContain("Systematic Shoppers");
+        expect(body).toContain("Systematic Shopper");
 
         done();
       });
