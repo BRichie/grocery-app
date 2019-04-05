@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../static/partials/head.ejs %>
+</head>
+
+<body class="indexBG">
+    <main class="container">
+        <% include ../static/partials/navbar.ejs %>
+
+        <% include ../static/partials/messages.ejs %>
+
+
+        <h1>Item List</h1>
+
+        <form action="/items/create" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="title" aria-describedby="titleHelp"
+                    placeholder="Enter Item">
+            </div>
+            <button type="submit" class="btn btn-success btn-add-item">Add Item</button>
+        </form>
+
+        <ul class="list-group">
+
+            <% items.forEach((item) => { %>
+            <li class="list-group-item">
+                <a href="/items/<%= item.id %>"> <%= item.title %> </a>
+                <% if(item.purchased === true) { %>
+                <i class="icon ion-md-close"></i>
+
+                <% } %>
+            </li>
+            <% }) %>
+        </ul>
+
+    </main>
+</body>
+
+</html>
