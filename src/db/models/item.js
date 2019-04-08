@@ -1,15 +1,16 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  
   var Item = sequelize.define('Item', {
-    title: DataTypes.STRING,
-    purchased: DataTypes.BOOLEAN
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    purchased: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
   }, {});
   
   
-  Item.associate = function(models) {
-
-
-  };
   return Item;
 };
