@@ -12,10 +12,12 @@
 
     <% include ../static/partials/messages.ejs %>
 
-    <h1><%- item.title %></h1>
+    <h1><%- item.title %></h1> 
+    <p>Status:
     <% if(item.purchased === true) { %>
-    <% } %>
-
+      <i>Purchased</i>
+      <% } %>
+    </p>
 
     <a href="/items/<%= item.id %>/edit" class="btn btn-warning">Edit</a>
 

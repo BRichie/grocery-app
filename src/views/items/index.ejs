@@ -3,35 +3,40 @@
 
 <head>
     <% include ../static/partials/head.ejs %>
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Oswald:700|Roboto" rel="stylesheet">
+
 </head>
 
 <body class="indexBG">
-        <% include ../static/partials/navbar.ejs %>
+    <% include ../static/partials/navbar.ejs %>
 
     <main class="container">
 
         <% include ../static/partials/messages.ejs %>
 
 
-        <h1>Item List</h1>
+        <h1 class="indexList">Shopping List</h1>
 
         <form action="/items/create" method="post">
             <div class="form-group">
                 <input type="text" class="form-control" name="title" aria-describedby="titleHelp"
                     placeholder="Enter Item">
             </div>
-            <button type="submit" class="btn btn-success btn-add-item">Add Item</button>
-        </form>
+            <button type="submit" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-plus"></span> Add Item</a>  </button>
+              </form>
 
         <ul class="list-group">
 
             <% items.forEach((item) => { %>
             <li class="list-group-item">
+                <% if(item.purchased != true) { %>
                 <a href="/items/<%= item.id %>"> <%= item.title %> </a>
-                <% if(item.purchased === true) { %>
-                <i class="icon ion-md-close"></i>
+                <% } else {  %>
+                <del> <a href="/items/<%= item.id %>"> <%= item.title %> </a></del>
+                <i class="icon ion-md-checkmark"></i>
 
                 <% } %>
+
             </li>
             <% }) %>
         </ul>
