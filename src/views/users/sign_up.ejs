@@ -18,27 +18,36 @@
         <form action="/users" method="post">
 
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" name="email" aria-describedby="emailHelp"
-                    placeholder="Enter email">
-                <small class="text-muted" id="emailHelp">email address must be a valid address</small>
-            </div>
+                <div class="col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name="password" aria-describedby="passwordHelp"
-                    placeholder="Enter password">
-                <small class="text-muted" id="passwordHelp">password must match confirmation below</small>
-            </div>
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" aria-describedby="passwordHelp"
+                            placeholder="Enter password">
+                            <small class="text-muted" id="emailHelp">Must be a valid Email</small>
 
-            <div class="form-group">
-                <label for="passwordConfirmation">Password confirmation</label>
-                <input type="password" class="form-control" name="passwordConfirmation" aria-describedby="passwordHelp"
-                    placeholder="Enter password confirmation">
-            </div>
+                   
+                </div>
 
-            <button type="submit" class="btn btn-primary">Sign up</button>
-        </form>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label for="passwordConfirmation">Password confirmation</label>
+                        <input type="password" class="form-control" name="passwordConfirmation"
+                            aria-describedby="passwordHelp" placeholder="Enter password confirmation">
+                    </div>
+               
+               
+                <div class="col-md-6">
+
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                </div>
+                </form>
+
     </main>
 
     <% include ../static/partials/baseScripts.ejs %>

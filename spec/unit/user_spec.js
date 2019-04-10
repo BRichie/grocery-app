@@ -44,8 +44,8 @@ describe("User", () => {
                     done();
                 })
                 .catch((err) => {
-                    expect(err.message).toContain("Validation error: Must be a valid Email");
-                    done();
+                    expect(err.message).toContain("Validation error: must be a valid email");
+                    done()
                 });
         });
 
