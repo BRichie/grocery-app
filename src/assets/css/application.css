@@ -74,6 +74,10 @@ h1 {
     text-align: center;
 
 }
+.wasPurchased a {
+    color: red;
+
+}
 
 
 /* new item */

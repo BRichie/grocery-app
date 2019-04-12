@@ -34,7 +34,7 @@
                 <% if(item.purchased != true) { %>
                 <a href="/items/<%= item.id %>"> <%= item.title %> </a>
                 <% } else {  %>
-                <del> <a href="/items/<%= item.id %>"> <%= item.title %> </a></del>
+                <del class="wasPurchased"> <a href="/items/<%= item.id %>"> <%= item.title %> </a></del>
                 <i class="icon ion-md-checkmark"></i>
 
                 <% } %>
