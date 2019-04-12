@@ -4,6 +4,7 @@
 <head>
     <% include ../static/partials/head.ejs %>
     <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Oswald:700|Roboto" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -20,10 +21,12 @@
         <form action="/items/create" method="post">
             <div class="form-group">
                     <div class="col-md-6">
-                <input type="text" class="form-control" name="title" aria-describedby="titleHelp"
+                        
+                <input type="text" class="form-control" id="titleStyle" name="title" aria-describedby="titleHelp"
                     placeholder="Enter Item">
             </div>
-            <button type="submit" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-plus"></span> Add Item</a>  </button>
+            <button class="btn-add-item"><i class="fa fa-plus-square"></i> Add</button>
+
               </form>
 
         <ul class="list-group">
