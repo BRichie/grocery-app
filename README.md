@@ -18,4 +18,4 @@ Users are able to add, update, delete and mark items as purchased in real time. 
 > **APPLICATION DEPLOYED**
 https://brichie-systematicshopper.herokuapp.com/
 
->If I had more time on the project, I would like to allow users to create multiple lists and add an "amount" box to fill in as well.  Pricing would be a great addition. I think I would also like the store and any coupons that might be available for items listed.  
+>If I had more time on the project, I would like to allow users to create multiple lists and add an "amount" box to fill in as well.  Pricing would be a great addition. I think I would also like the store and any coupons that might be available for items listed on the item page.  
